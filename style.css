@@ -1,0 +1,410 @@
+/* Style global du site */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4; /* Couleur de fond légère */
+}
+
+
+
+/* Sections de contenu */
+section {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 1200px; /* Largeur maximale du contenu */
+    background-color: white; /* Fond blanc pour les sections */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Style des paragraphes */
+p {
+    font-size: 16px; /* Taille de police confortable pour la lecture */
+    line-height: 1.6; /* Hauteur de ligne pour améliorer la lisibilité */
+    margin: 0 0 1em; /* Marges en bas des paragraphes */
+    text-align: justify; /* Alignement du texte pour une présentation soignée */
+}
+
+/* Ajustement des premiers et derniers paragraphes */
+section p:first-of-type {
+    margin-top: 0; /* Supprime la marge supérieure pour le premier paragraphe */
+}
+
+section p:last-of-type {
+    margin-bottom: 0; /* Supprime la marge inférieure pour le dernier paragraphe */
+}
+/* Style des tableaux */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: justify;
+    vertical-align: top; /* Aligne le texte en haut des cellules */
+}
+
+/* Style des paragraphes dans les cellules de tableau */
+table td p {
+    font-size: 16px; /* Taille de police identique aux paragraphes en dehors des tableaux */
+    line-height: 1.6; /* Hauteur de ligne identique aux paragraphes en dehors des tableaux */
+    margin: 0; /* Supprime les marges pour éviter des espaces excessifs */
+    text-align: justify; /* Alignement du texte pour une présentation soignée */
+}
+/* Réglages pour les en-têtes de tableau */
+th {
+    background-color: #3f3f47; /* Couleur de fond des en-têtes de tableau */
+    color: white;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10 20px;
+}
+
+.logo {
+    width: 150px;  /* Ajuste la largeur selon tes besoins */
+    height: 100px; /* Ajuste la hauteur selon tes besoins */
+    object-fit: contain; /* Conserve les proportions de l'image */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration:dotted;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.service {
+    margin-bottom: 20px;
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+}
+/* Style pour la section principale */
+main {
+    padding: 20px;
+}
+
+main h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Style pour les sections de service */
+.service {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.service img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.service h3 {
+    margin-top: 0;
+}
+
+/* Style pour la section de contact */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #ff9f00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #e68a00;
+}
+
+/* Section introduction */
+#introduction {
+    background-image: url('images/ricardo-gomez-angel-jYNvXKTUYvs-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 50px;
+    position: relative;
+}
+
+#introduction::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#introduction h2 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+#introduction p {
+    font-size: 1.5em;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    animation:backwards;
+}
+
+/* Animation pour le texte */
+@keyframes fadeInUp {
+    from {
+        opacity: 100;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1200;
+        transform: translateY(0);
+    }
+}
+
+/* Sections des services */
+#services {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.service {
+    margin-bottom: 40px;
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Section contact */
+#contact {
+    padding: 50px 20px;
+}
+
+#contact form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #003366;
+}
+/* Section Contactez-nous */
+#contact {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contact-info,
+.contact-form {
+    margin-bottom: 30px;
+}
+
+.contact-info h3,
+.contact-form h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form input[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.map-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin-top: 10px;
+    border: none #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+footer p {
+    margin: 5px 0;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+/* Réglages pour les écrans mobiles */
+@media (max-width: 768px) {
+    p {
+        font-size: 14px; /* Réduit la taille de police pour les petits écrans */
+        line-height: 1.5; /* Ajuste la hauteur de ligne */
+    }
+    table td p {
+        font-size: 14px; /* Réduit la taille de police pour les petits écrans */
+        line-height: 1.5; /* Ajuste la hauteur de ligne */
+    }
+}
+ /*RESPONSIVE*/

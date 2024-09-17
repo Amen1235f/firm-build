@@ -1,0 +1,273 @@
+.cadre {
+    width: 100%;
+    background: #333; /* Gradient for a sleek look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Slightly more pronounced shadow */
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1000; /* Ensure header stays on top */
+    padding: 15px 0; /* Padding to space out the content */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out logo and center items */
+}
+
+/* Logo Container - Align Left */
+.logo-container {
+    display: flex; /* Flexbox for horizontal alignment */
+    align-items: center; /* Center vertically */
+    margin: 0 20px; /* Margin on the right */
+    background-color: transparent; /* Transparent background for clean look */
+    margin-left: -100px; /* Align to left with margin */
+}
+
+.logo {
+    width: 80px; /* Adjusted size for better visibility */
+    height: 80px;
+    border-radius: 8px; /* Rounded corners for a softer look */
+    border: 2px solid #ECF0F1; /* White border for emphasis */
+    margin-right: 15px; /* Space between logo and title */
+}
+
+/* Title Styling */
+.site-title {
+    font-size: 22px; /* Adjust font size for longer title */
+    color: #ECF0F1; /* White color for contrast */
+    font-family: 'Montserrat', sans-serif; /* Elegant font */
+    margin: 0;
+    font-weight: 700; /* Bold for emphasis */
+    line-height: 1.4; /* Adjust line height for better spacing */
+    text-align: left; /* Align text to the left */
+}
+
+/* Flexbox Container for Header - Align Logo Left, Nav Right */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Keep space between logo and nav */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+    width: 100%;
+    padding: 0 30px; /* Adjust padding for spacing */
+}
+
+/* Navigation Styling */
+nav {
+    display: flex; /* Ensure nav stays inline */
+    justify-content: flex-end; /* Align items to the right */
+    margin-left: auto; /* Push navigation to the far right */
+}
+
+.liste {
+    display: flex;
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    gap: 30px; /* Space between items */
+}
+
+.liste-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
+    position: relative; /* Position for hover effect */
+    overflow: hidden; /* Ensure hover effect stays within bounds */
+}
+
+.liste-item a {
+    text-decoration: none; /* Remove underline */
+    color: #ECF0F1; /* White color for contrast */
+    font-size: 18px; /* Size of navigation text */
+    font-family: 'Roboto', sans-serif; /* Clean and professional font */
+    position: relative; /* For pseudo-element */
+    z-index: 10; /* Above hover effect */
+}
+
+/* Hover Effects */
+.liste-item:hover {
+    background-color: #34495E; /* Darker blue hover effect */
+    transform: translateY(-2px); /* Subtle hover lift */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .header-container {
+        padding: 0 20px; /* Less padding for smaller screens */
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .logo-container {
+        margin-bottom: 10px; /* Space between logo and navigation */
+        justify-content: flex-start; /* Keep content aligned to left */
+    }
+}
+
+@media (max-width: 768px) {
+    .liste {
+        margin-top: 10px; /* Add margin on top for spacing */
+        gap: 15px; /* Reduce gap between items */
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+    
+    .liste-item {
+        padding: 8px 16px; /* Adjust padding for smaller buttons */
+    }
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 18px; /* Smaller font for narrow screens */
+        text-align: center; /* Center text */
+    }
+
+    .liste {
+        gap: 10px; /* Smaller gap for mobile view */
+    }
+    
+    .logo {
+        width: 70px; /* Adjust logo size for smaller screens */
+        height: 70px;
+    }
+}
+
+/* Section Contactez-nous */
+#contact {
+    padding: 40px 20px;
+    background: #F9F9F9;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    animation: fadeIn 1s ease-out;
+}
+
+.contact-info, .contact-form {
+    background: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 40px;
+    animation: slideInUp 1s ease-out;
+}
+
+.contact-info h3, .contact-form h3 {
+    font-size: 28px;
+    color: #444;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+}
+
+.contact-info p, .contact-form label {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form input[type="submit"] {
+    background: #333;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+    background: #555;
+}
+
+.map-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.map-container iframe {
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #ECF0F1;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ECF0F1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #BDC3C7;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#contact h2, .contact-info, .contact-form {
+    animation: fadeIn 1s ease-out;
+}
+
+.contact-info, .contact-form {
+    animation: slideInUp 1s ease-out;
+}

@@ -1,0 +1,479 @@
+/* General Header Styling */
+.cadre {
+    width: 100%;
+    background: #333; /* Gradient for a sleek look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Slightly more pronounced shadow */
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1000; /* Ensure header stays on top */
+    padding: 15px 0; /* Padding to space out the content */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out logo and center items */
+}
+
+/* Logo Container - Align Left */
+.logo-container {
+    display: flex; /* Flexbox for horizontal alignment */
+    align-items: center; /* Center vertically */
+    margin: 0 20px; /* Margin on the right */
+    background-color: transparent; /* Transparent background for clean look */
+    margin-left: -100px; /* Align to left with margin */
+}
+
+.logo {
+    width: 80px; /* Adjusted size for better visibility */
+    height: 80px;
+    border-radius: 8px; /* Rounded corners for a softer look */
+    border: 2px solid #ECF0F1; /* White border for emphasis */
+    margin-right: 15px; /* Space between logo and title */
+}
+
+/* Title Styling */
+.site-title {
+    font-size: 22px; /* Adjust font size for longer title */
+    color: #ECF0F1; /* White color for contrast */
+    font-family: 'Montserrat', sans-serif; /* Elegant font */
+    margin: 0;
+    font-weight: 700; /* Bold for emphasis */
+    line-height: 1.4; /* Adjust line height for better spacing */
+    text-align: left; /* Align text to the left */
+}
+
+/* Flexbox Container for Header - Align Logo Left, Nav Right */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Keep space between logo and nav */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+    width: 100%;
+    padding: 0 30px; /* Adjust padding for spacing */
+}
+
+/* Navigation Styling */
+nav {
+    display: flex; /* Ensure nav stays inline */
+    justify-content: flex-end; /* Align items to the right */
+    margin-left: auto; /* Push navigation to the far right */
+}
+
+.liste {
+    display: flex;
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    gap: 30px; /* Space between items */
+}
+
+.liste-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
+    position: relative; /* Position for hover effect */
+    overflow: hidden; /* Ensure hover effect stays within bounds */
+}
+
+.liste-item a {
+    text-decoration: none; /* Remove underline */
+    color: #ECF0F1; /* White color for contrast */
+    font-size: 18px; /* Size of navigation text */
+    font-family: 'Roboto', sans-serif; /* Clean and professional font */
+    position: relative; /* For pseudo-element */
+    z-index: 10; /* Above hover effect */
+}
+
+/* Hover Effects */
+.liste-item:hover {
+    background-color: #34495E; /* Darker blue hover effect */
+    transform: translateY(-2px); /* Subtle hover lift */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .header-container {
+        padding: 0 20px; /* Less padding for smaller screens */
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .logo-container {
+        margin-bottom: 10px; /* Space between logo and navigation */
+        justify-content: flex-start; /* Keep content aligned to left */
+    }
+}
+
+@media (max-width: 768px) {
+    .liste {
+        margin-top: 10px; /* Add margin on top for spacing */
+        gap: 15px; /* Reduce gap between items */
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+    
+    .liste-item {
+        padding: 8px 16px; /* Adjust padding for smaller buttons */
+    }
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 18px; /* Smaller font for narrow screens */
+        text-align: center; /* Center text */
+    }
+
+    .liste {
+        gap: 10px; /* Smaller gap for mobile view */
+    }
+    
+    .logo {
+        width: 70px; /* Adjust logo size for smaller screens */
+        height: 70px;
+    }
+}
+
+
+
+/*
+<--------------------->
+*/
+/* General Section Styling */
+#introduction {
+    position: relative;
+    overflow: hidden;
+    height: 70vh; /* Increased height for a more impactful section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff; /* White text color */
+    margin-top: 20px;
+}
+
+/* Slider Styling */
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Place behind text overlay */
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slideAnimation 10s ease-in-out infinite; /* Adjusted duration and easing */
+    opacity: 0;
+}
+
+@keyframes slideAnimation {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+}
+
+/* Text Overlay Styling */
+.text-overlay {
+    position: relative;
+    z-index: 1; /* Place above slider */
+    padding: 30px; /* Increased padding for better spacing */
+    background: rgba(0, 0, 0, 0.7); /* Slightly darker semi-transparent background */
+    border-radius: 12px; /* Rounded corners with larger radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for better depth */
+    max-width: 90%; /* Slightly wider text container */
+    margin: 0 auto;
+    border: 2px solid #FFD700; /* Border color matching title */
+}
+
+.text-overlay h2 {
+    font-size: 2.5em; /* Larger font size for greater impact */
+    margin-bottom: 15px;
+    animation: fadeInFromTop 1.5s ease-out; /* Animation for heading */
+    color: #FFD700; /* Gold color for title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for better readability */
+}
+
+.text-overlay p {
+    font-size: 1.2em; /* Slightly larger font size for better readability */
+    line-height: 1.6; /* Increased line height for better readability */
+    animation: fadeInFromTop 1.5s ease-out 0.5s; /* Delay for paragraph */
+    color: #E0E0E0; /* Light gray color for text */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Shadow for better readability */
+}
+
+/* Animation for Heading and Paragraph */
+@keyframes fadeInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px); /* Increased vertical movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* General Section Styling */
+#services {
+    position: relative;
+    overflow: hidden;
+    padding: 80px 20px; /* Adjusted padding */
+    background: #f4f4f4; /* Neutral background for a professional look */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading Styling */
+#services h2 {
+    font-size: 3.5em; /* Larger font size */
+    margin-bottom: 60px; /* Increased margin */
+    text-align: center;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Spacing between letters */
+}
+
+/* Slider Container Styling */
+.slider-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%; /* Full width */
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px; /* Larger rounded corners */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure rounded corners work */
+}
+
+/* Slider Wrapper Styling */
+.slider-wrapper {
+    display: flex;
+    width: 100%;
+    transition: transform 0.6s ease-in-out; /* Smooth transition */
+}
+
+/* Slider Card Styling */
+.slider-card {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content */
+    flex-shrink: 0;
+    width: 100%;
+    height: 600px; /* Increased height for prominence */
+    background: #fff;
+    border-radius: 16px; /* Larger rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 40px; /* Increased padding */
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Image Styling */
+.slider-card img {
+    width: 50%;
+    height: 100%;
+    border-radius: 12px; /* Slightly larger rounded corners */
+    object-fit: cover;
+}
+
+/* Text Styling */
+.slider-card .text {
+    width: 50%;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slider-card h3 {
+    font-size: 2.5em; /* Larger font size */
+    margin-bottom: 20px; /* Increased margin */
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.slider-card p {
+    font-size: 1.2em; /* Larger text size */
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Hover Effects */
+.slider-card:hover {
+    transform: scale(1.03); /* Slight zoom effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Slider Navigation Styling */
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 0 20px;
+}
+
+.slider-nav button {
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: #fff;
+    font-size: 2.5em; /* Larger font size */
+    padding: 15px; /* Increased padding */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for better visibility */
+}
+
+.slider-nav button:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #services {
+        padding: 60px 10px;
+    }
+
+    .slider-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .slider-card img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .slider-card .text {
+        width: 100%;
+    }
+
+    .slider-nav button {
+        font-size: 2em; /* Adjusted font size for mobile */
+        padding: 10px;
+    }
+}
+/* Contact Section Styling */
+#contact {
+    background: #333; /* Dark background */
+    color: #fff; /* Light text color for contrast */
+    padding: 60px 20px; /* Adjusted padding */
+    text-align: center; /* Center text alignment */
+}
+
+/* Heading Styling */
+#contact h2 {
+    font-size: 3em; /* Larger font size for emphasis */
+    margin-bottom: 40px; /* Increased margin */
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Spacing between letters */
+}
+
+/* Form Styling */
+#contact form {
+    max-width: 700px; /* Limit form width */
+    margin: 0 auto; /* Center form horizontally */
+    background: #444; /* Slightly lighter background for the form */
+    padding: 20px; /* Padding for form elements */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow for form depth */
+}
+
+/* Form Labels */
+#contact form label {
+    display: block;
+    margin-bottom: 10px; /* Spacing below labels */
+    font-weight: bold;
+    color: #fff; /* White text color */
+}
+
+/* Form Inputs and Textarea */
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    border: none;
+    margin-left: -15px;
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 20px; /* Spacing below inputs */
+    font-size: 1em;
+    color: #333; /* Dark text color for readability */
+}
+
+/* Submit Button */
+#contact form button {
+    background: #1e90ff; /* Bright button color */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 15px 30px; /* Larger padding for button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1.2em; /* Larger font size */
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+#contact form button:hover {
+    background: #187bcd; /* Darker button color on hover */
+}
+
+/* Contact Info */
+#contact p {
+    margin: 10px 0; /* Vertical spacing */
+    font-size: 1.2em; /* Increased font size */
+}
+
+/* Map Container Styling */
+.map-container {
+    margin-top: 40px; /* Space above the map */
+}
+
+.map-container iframe {
+    width: 100%; /* Full width */
+    height: 300px; /* Fixed height */
+    border: none; /* No border for iframe */
+    border-radius: 8px; /* Rounded corners */
+}
+footer {
+    background-color: #333;
+    margin-top: 20px;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
